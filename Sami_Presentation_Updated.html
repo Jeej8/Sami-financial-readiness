@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سمي · Sami | SME Financial Readiness Engine</title>
+<meta name="description" content="A critical-thinking pitch for سمي (Sami) — the SME Financial Readiness Engine.">
+<style>
+:root{
+  --bg:#050507; --bg2:#0b0b10; --text:#f7f7f5; --muted:#a7a7b0;
+  --line:rgba(255,255,255,.11); --glass:rgba(255,255,255,.065);
+  --green:#75f2ad; --cyan:#6edcff; --violet:#a78bfa; --gold:#e8c27b;
+  --red:#ff6b6b; --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",Inter,Segoe UI,sans-serif;overflow-x:hidden}
+body:before{
+  content:"";position:fixed;inset:-30%;z-index:-3;
+  background:
+   radial-gradient(circle at 20% 20%,rgba(117,242,173,.13),transparent 25%),
+   radial-gradient(circle at 80% 15%,rgba(110,220,255,.12),transparent 25%),
+   radial-gradient(circle at 65% 75%,rgba(167,139,250,.10),transparent 27%);
+  filter:blur(35px);animation:drift 16s ease-in-out infinite alternate;
+}
+body:after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.025) 45%,transparent 60%);transform:translateX(-100%);animation:sheen 12s ease-in-out infinite}
+@keyframes drift{to{transform:translate3d(5%,3%,0) scale(1.05)}}
+@keyframes sheen{55%,100%{transform:translateX(120%)}}
+a{color:inherit}
+.nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:20;width:min(94%,980px);display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 16px;border:1px solid var(--line);background:rgba(12,12,16,.68);backdrop-filter:blur(22px);border-radius:999px;box-shadow:0 18px 60px rgba(0,0,0,.3)}
+.brand{font-weight:700;letter-spacing:-.03em}.brand span{color:var(--green)}
+.navlinks{display:flex;gap:4px}.navlinks a{text-decoration:none;color:#c7c7cc;font-size:12px;padding:8px 11px;border-radius:999px}.navlinks a:hover{background:rgba(255,255,255,.08);color:white}
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--green),var(--cyan),var(--violet));z-index:50}
+main{width:100%}
+section{min-height:100vh;display:flex;align-items:center;padding:110px 22px 80px;position:relative}
+.container{width:min(100%,var(--max));margin:auto}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:#8f8f99;margin-bottom:18px}
+h1{font-size:clamp(62px,11vw,150px);line-height:.86;letter-spacing:-.075em;margin:0;font-weight:700}
+h2{font-size:clamp(44px,6vw,78px);line-height:.95;letter-spacing:-.055em;margin:0 0 24px}
+h3{font-size:24px;letter-spacing:-.03em;margin:0 0 12px}
+p{font-size:18px;line-height:1.6;color:var(--muted);max-width:720px}
+.big{font-size:clamp(28px,4vw,52px);line-height:1.08;letter-spacing:-.045em;color:#f2f2f1}
+.grad{background:linear-gradient(100deg,#fff 10%,#aef8cc 48%,#8ddfff 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero{text-align:center;min-height:100svh}
+.hero .container{display:flex;flex-direction:column;align-items:center}
+.logo{width:88px;height:88px;border-radius:28px;display:grid;place-items:center;margin-bottom:28px;font-size:34px;font-weight:800;letter-spacing:-.08em;color:#050507;background:linear-gradient(145deg,#d9ffe9,#75f2ad 52%,#6edcff);box-shadow:0 0 80px rgba(117,242,173,.18),inset 0 1px 0 rgba(255,255,255,.8)}
+.arabic{font-size:clamp(48px,8vw,100px);font-weight:800;letter-spacing:-.08em;margin-top:14px}
+.tag{margin-top:28px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;color:#d8d8dc;background:rgba(255,255,255,.04);font-size:13px}
+.sami-tagline{margin-top:18px;display:flex;flex-direction:column;gap:5px;align-items:center}.sami-tagline span{font-size:clamp(22px,3vw,34px);font-weight:750;letter-spacing:-.04em;background:linear-gradient(100deg,#fff 10%,#aef8cc 48%,#8ddfff 80%);-webkit-background-clip:text;background-clip:text;color:transparent}.sami-tagline small{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#77777f}
+.scroll{position:absolute;bottom:30px;color:#777;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.card{grid-column:span 4;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));border-radius:28px;padding:28px;backdrop-filter:blur(16px);box-shadow:0 20px 70px rgba(0,0,0,.18)}
+.card.wide{grid-column:span 8}.card.full{grid-column:1/-1}
+.card .num{font-size:12px;color:#85858d;margin-bottom:42px}
+.card strong{color:#f4f4f2}
+.metric{font-size:clamp(48px,7vw,86px);font-weight:700;letter-spacing:-.07em;line-height:.9}
+.source{font-size:11px;color:#72727b;margin-top:18px;line-height:1.5}
+.source a{color:#9c9ca4;text-decoration:underline;text-underline-offset:3px}
+.timeline{display:flex;gap:0;align-items:stretch;margin-top:42px;overflow-x:auto;padding-bottom:10px}
+.step{min-width:220px;flex:1;padding:24px;border-top:1px solid var(--line);position:relative}
+.step:before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:#888}
+.step.active:before{background:var(--green);box-shadow:0 0 22px var(--green)}
+.step .year{font-size:12px;color:#888;margin-bottom:20px}
+.step h3{font-size:20px}
+.question{padding:35px;border:1px solid var(--line);border-radius:34px;background:rgba(255,255,255,.04);margin-top:28px;position:relative;overflow:hidden}
+.question:after{content:"";position:absolute;width:260px;height:260px;right:-120px;top:-130px;border-radius:50%;background:rgba(110,220,255,.12);filter:blur(20px)}
+.question .q{font-size:clamp(28px,4vw,54px);line-height:1.04;letter-spacing:-.045em;position:relative;z-index:1}
+.arrow{color:var(--green);font-size:24px;margin:18px 0}
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.pill{border:1px solid var(--line);padding:9px 13px;border-radius:999px;color:#c7c7cc;background:rgba(255,255,255,.035);font-size:13px}
+.pill.good{border-color:rgba(117,242,173,.35);color:#b9ffd6}
+.pill.no{border-color:rgba(255,107,107,.28);color:#ffb0b0}
+.funnel{display:grid;grid-template-columns:1fr 1.3fr 1.7fr;gap:14px;align-items:center;margin-top:36px}
+.funnel>div{border:1px solid var(--line);border-radius:24px;padding:26px;background:rgba(255,255,255,.045)}
+.funnel .winner{border-color:rgba(117,242,173,.45);background:linear-gradient(145deg,rgba(117,242,173,.10),rgba(255,255,255,.035))}
+.funnel small{color:#85858d}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:36px}
+.flow .node{min-height:170px;border:1px solid var(--line);border-radius:24px;padding:22px;background:rgba(255,255,255,.045);position:relative}
+.flow .node:not(:last-child):after{content:"→";position:absolute;right:-17px;top:72px;color:#777;font-size:22px;z-index:2}
+.node b{display:block;font-size:12px;color:#888;margin-bottom:32px}
+.node h3{font-size:19px}
+.dashboard{border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));padding:26px;margin-top:35px;box-shadow:0 35px 100px rgba(0,0,0,.25)}
+.dash-top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:25px}
+.score{font-size:74px;letter-spacing:-.08em;font-weight:700}.score span{font-size:18px;color:#777;letter-spacing:0}
+.bars{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bar{padding:18px;border:1px solid var(--line);border-radius:20px}.bar label{display:flex;justify-content:space-between;font-size:12px;color:#999}.track{height:7px;background:#202027;border-radius:9px;margin-top:12px;overflow:hidden}.fill{height:100%;border-radius:9px;background:linear-gradient(90deg,var(--green),var(--cyan))}
+.ai{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}.chat{border:1px solid var(--line);border-radius:28px;padding:26px;background:rgba(255,255,255,.045)}.bubble{padding:15px 17px;border-radius:18px;margin:12px 0;max-width:88%;line-height:1.45;font-size:14px}.user{margin-left:auto;background:rgba(255,255,255,.09)}.bot{background:linear-gradient(145deg,rgba(117,242,173,.11),rgba(110,220,255,.06));border:1px solid rgba(117,242,173,.18)}
+.guard{border-left:2px solid var(--green);padding-left:18px;margin-top:20px;color:#bdbdc4;font-size:14px;line-height:1.5}
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:35px}.road{border:1px solid var(--line);border-radius:24px;padding:24px;background:rgba(255,255,255,.04)}.road .phase{font-size:11px;color:#888;margin-bottom:20px}
+.cta{text-align:center}.cta h2{max-width:900px;margin:0 auto}.cta p{margin:25px auto}.button{display:inline-flex;padding:14px 20px;border-radius:999px;background:#f4f4f1;color:#09090b;text-decoration:none;font-weight:650;margin-top:12px;box-shadow:0 15px 45px rgba(255,255,255,.10)}
+footer{padding:40px 22px 70px;color:#686870;font-size:12px;text-align:center}
+.reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:800px){
+ .navlinks{display:none}.nav{justify-content:center}.grid{display:block}.card{margin-bottom:14px}.funnel{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.flow .node:not(:last-child):after{display:none}.ai{grid-template-columns:1fr}.bars{grid-template-columns:1fr}.roadmap{grid-template-columns:1fr 1fr}
+ section{padding-top:95px}.big{font-size:30px}.metric{font-size:62px}
+}
+@media(max-width:500px){.flow{grid-template-columns:1fr}.roadmap{grid-template-columns:1fr}.card{padding:23px}.question{padding:25px}.logo{width:76px;height:76px}}
+
+.engine-diagram{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:center;margin-top:28px}
+.engine-node{border:1px solid var(--line);border-radius:22px;padding:22px;background:rgba(255,255,255,.045);min-height:145px;display:flex;flex-direction:column;justify-content:center}
+.engine-node b{font-size:10px;letter-spacing:.16em;color:#85858d;margin-bottom:10px}.engine-node span{font-size:20px;font-weight:650;letter-spacing:-.03em}.engine-node small{color:#888;font-size:12px;line-height:1.45;margin-top:8px}.engine-node.glow{border-color:rgba(117,242,173,.45);background:linear-gradient(145deg,rgba(117,242,173,.13),rgba(110,220,255,.05));box-shadow:0 0 45px rgba(117,242,173,.08)}.engine-arrow{font-size:28px;color:#777}
+@media(max-width:800px){.engine-diagram{grid-template-columns:1fr;}.engine-arrow{text-align:center;transform:rotate(90deg);}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <div class="brand">سمي <span>· SME</span></div>
+  <div class="navlinks">
+    <a href="#research">Research</a><a href="#thinking">Thinking</a><a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#mvp">MVP</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+ <div class="container reveal">
+   <div class="logo">SME</div>
+   <div class="eyebrow">First: what does SME actually mean?</div>
+   <h1 class="grad">SME</h1>
+   <p class="big"><strong>Small & Medium-sized Enterprise.</strong></p>
+   <p>Think: a small restaurant, online store, family business, construction company, local service, or growing startup. These businesses are a major part of the economy — and they often need financing to grow.</p>
+   <div class="tag">Only after we understand the problem do we meet <strong>سمي</strong> — our SME Financial Readiness Engine.</div>
+   <div class="sami-tagline"><span>سمي، وش بغيتي؟</span><small>Tagline · the human–AI conversation starts here.</small></div>
+ </div>
+ <div class="scroll">scroll to start the research ↓</div>
+</section>
+
+<section id="research">
+ <div class="container">
+  <div class="eyebrow reveal">01 · The research signal</div>
+  <h2 class="reveal">This is not a<br><span class="grad">made-up problem.</span></h2>
+  <p class="reveal">Before designing anything, we asked: <strong>is SME financing actually an important problem in Saudi Arabia right now?</strong> The evidence says yes — and the ecosystem is actively trying to improve it.</p>
+  <div class="grid reveal" style="margin-top:35px">
+   <div class="card">
+    <div class="num">ACCESS TO FINANCE</div>
+    <div class="metric">9.4%</div>
+    <p>SME lending was 9.4% of total bank lending in 2024. The IMF noted this was still below the Vision 2030 target of 20%.</p>
+    <div class="source">IMF · Saudi Arabia Article IV, 2025</div>
+   </div>
+   <div class="card">
+    <div class="num">REAL DEMAND</div>
+    <div class="metric">1,200+</div>
+    <p>Funding Week in May 2026 delivered more than 1,200 SME consultation sessions.</p>
+    <div class="source">Monsha’at · Funding Week 2026</div>
+   </div>
+   <div class="card">
+    <div class="num">THE ECOSYSTEM</div>
+    <div class="metric">62</div>
+    <p>Organizations participated in Funding Week, including financial and government entities.</p>
+    <div class="source">Monsha’at · May 2026</div>
+   </div>
+  </div>
+  <div class="question reveal"><div class="q">The interesting part: <span class="grad">the Kingdom is already building more funding channels.</span><br>So what friction remains?</div></div>
+ </div>
+</section>
+
+<section id="saudi">
+ <div class="container">
+  <div class="eyebrow reveal">02 · Why Saudi Arabia · why now?</div>
+  <h2 class="reveal">Three things are<br>happening <span class="grad">together.</span></h2>
+  <div class="grid reveal">
+   <div class="card">
+    <div class="num">01 · FINTECH</div>
+    <h3>Saudi finance is becoming more digital.</h3>
+    <p>SAMA reported 371 operating fintech companies by the end of August 2026.</p>
+   </div>
+   <div class="card">
+    <div class="num">02 · OPEN BANKING</div>
+    <h3>Financial data can become more useful.</h3>
+    <p>Open Banking moved from sandbox to commercial licensing in March 2026, with 337,000+ connected accounts reported by September.</p>
+   </div>
+   <div class="card">
+    <div class="num">03 · SME SUPPORT</div>
+    <h3>The system wants SMEs to be more ready.</h3>
+    <p>Monsha’at is explicitly working to improve SME access to funding and readiness to benefit from funding solutions.</p>
+   </div>
+  </div>
+  <div class="pills reveal">
+   <span class="pill good">Fintech growth</span><span class="pill good">Open Banking</span><span class="pill good">SME financing</span><span class="pill good">Financial literacy</span><span class="pill good">Cash-flow management</span><span class="pill good">Credit information</span>
+  </div>
+  <div class="source reveal">Sources: SAMA 2026 · Monsha’at 2026 · IMF 2025/2026. These sources establish the context and ecosystem priorities; they do not claim that our proposed product has already been validated.</div>
+ </div>
+</section>
+
+<section id="banks">
+ <div class="container">
+  <div class="eyebrow reveal">03 · What are banks & fintechs trying to achieve?</div>
+  <h2 class="reveal">The ecosystem has<br>a <span class="grad">two-sided problem.</span></h2>
+  <div class="grid reveal">
+   <div class="card">
+    <div class="num">THE SME SIDE</div>
+    <h3>“Help me understand my position.”</h3>
+    <p>A business owner needs to know what their numbers say, what could weaken a financing application, and what they can improve before asking for funding.</p>
+   </div>
+   <div class="card">
+    <div class="num">THE FINANCIAL SIDE</div>
+    <h3>“Give me usable, trustworthy information.”</h3>
+    <p>Financial institutions need reliable financial information and efficient processes to evaluate customers and deliver better digital services.</p>
+   </div>
+   <div class="card wide">
+    <div class="num">THE GAP</div>
+    <h3>Between the two is a preparation layer.</h3>
+    <p>Saudi Arabia is improving access, funding channels and financial data infrastructure. Our question became: <strong>what if we build the layer that helps an SME understand and improve its financial readiness before entering the financing journey?</strong></p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="thinking">
+ <div class="container">
+  <div class="eyebrow reveal">04 · Critical thinking</div>
+  <h2 class="reveal">Now we ask the<br><span class="grad">better question.</span></h2>
+  <div class="question reveal"><div class="q">If financing options are growing… <br><span style="color:#8e8e96">why can the journey still feel difficult?</span></div></div>
+  <div class="arrow reveal">↓</div>
+  <div class="question reveal"><div class="q">Maybe the problem is not only <span class="grad">access.</span><br>Maybe it is <span class="grad">readiness.</span></div></div>
+  <p class="reveal">That became our hypothesis — not our conclusion. We then asked what the problem looks like for one actual business owner.</p>
+  <div class="pills reveal">
+    <span class="pill good">Funding pathways</span><span class="pill good">Financial literacy</span><span class="pill good">Cash-flow management</span><span class="pill good">Credit information</span><span class="pill good">SME readiness</span>
+  </div>
+ </div>
+</section>
+
+
+
+
+<section id="problem">
+ <div class="container">
+  <div class="eyebrow reveal">05 · Make the problem human</div>
+  <h2 class="reveal">Meet Hala.</h2>
+  <p class="big reveal"><strong>Fictional example.</strong> Hala runs a small Saudi business. It is growing. She wants financing to open another branch.</p>
+  <div class="grid reveal" style="margin-top:35px">
+   <div class="card wide">
+    <div class="num">THE MOMENT OF FRICTION</div>
+    <h3>She can apply.</h3>
+    <p>But before she applies, does she actually know how financially ready her business looks?</p>
+    <div class="pills"><span class="pill">Revenue</span><span class="pill">Expenses</span><span class="pill">Cash flow</span><span class="pill">Existing debt</span><span class="pill">Payment patterns</span><span class="pill">Business stability</span></div>
+   </div>
+   <div class="card">
+    <div class="num">THE QUESTION</div>
+    <h3>What happens if she is not ready?</h3>
+    <p>She may apply without knowing which parts of her financial profile need attention — and a rejection does not automatically teach her how to improve.</p>
+   </div>
+  </div>
+  <div class="question reveal"><div class="q">What if we moved the helpful explanation <span class="grad">before</span> the financing application?</div></div>
+ </div>
+</section>
+
+<section id="filter">
+ <div class="container">
+  <div class="eyebrow reveal">06 · We considered the alternatives</div>
+  <h2 class="reveal">Not every fintech problem<br>is our <span class="grad">problem.</span></h2>
+  <p class="reveal">We looked across the space. A hackathon idea has to be more than important — it needs to be understandable, buildable, demo-able and genuinely useful.</p>
+  <div class="funnel reveal">
+   <div><small>IDEA A</small><h3>Scam recovery assistant</h3><p>Important, but recovery depends heavily on banks, reporting processes and external actors.</p><div class="pill no">High dependency</div></div>
+   <div><small>IDEA B</small><h3>Open Banking permission manager</h3><p>Strong infrastructure angle, but harder to demonstrate a complete business outcome in a short MVP.</p><div class="pill">Interesting</div></div>
+   <div class="winner"><small>IDEA C · CHOSEN</small><h3>SME Financial Readiness Engine</h3><p>Clear user. Clear pain point. Uses current Saudi financial infrastructure. Can be prototyped with synthetic data. AI has a real role.</p><div class="pill good">Best hackathon fit</div></div>
+  </div>
+ </div>
+</section>
+
+<section id="solution">
+ <div class="container">
+  <div class="eyebrow reveal">07 · The idea</div>
+  <h2 class="reveal">Meet <span class="grad">سمي</span>.</h2>
+  <p class="big reveal">A digital financial-readiness check for SMEs — turning financial data into <strong>clarity, explanations and next actions.</strong></p>
+  <div class="question reveal" style="margin-top:32px">
+   <div class="q" style="font-size:clamp(25px,3.5vw,44px)">First, what is an <span class="grad">“engine”</span>?</div>
+   <p>An engine is simply the part of a system that takes <strong>inputs</strong>, processes them, and produces a useful <strong>output</strong>. Think of a car engine: fuel goes in → the engine processes it → movement comes out.</p>
+   <div class="engine-diagram">
+     <div class="engine-node"><b>INPUT</b><span>Business data</span><small>revenue · expenses · debt · cash flow</small></div>
+     <div class="engine-arrow">→</div>
+     <div class="engine-node glow"><b>ENGINE</b><span>Financial analysis</span><small>calculates indicators + explains patterns</small></div>
+     <div class="engine-arrow">→</div>
+     <div class="engine-node"><b>OUTPUT</b><span>Readiness insight</span><small>strengths · risks · next actions</small></div>
+   </div>
+ </div>
+ <div class="flow reveal">
+   <div class="node"><b>01 · CONNECT</b><h3>Bring in financial data</h3><p>Open Banking with consent, or demo/synthetic data for the MVP.</p></div>
+   <div class="node"><b>02 · UNDERSTAND</b><h3>Analyze the business</h3><p>Revenue, expenses, cash flow, debt and financial patterns.</p></div>
+   <div class="node"><b>03 · ASSESS</b><h3>Show readiness</h3><p>A transparent readiness assessment — not a loan approval.</p></div>
+   <div class="node"><b>04 · EXPLAIN</b><h3>Tell me why</h3><p>AI explains what is helping or hurting the assessment.</p></div>
+   <div class="node"><b>05 · ACT</b><h3>Give next steps</h3><p>Prioritized actions to strengthen the business before seeking financing.</p></div>
+  </div>
+  <div class="guard reveal">Important boundary: <strong>سمي does not approve, reject or guarantee financing.</strong> The financial institution remains responsible for the final financing decision.</div>
+ </div>
+</section>
+
+<section id="experience">
+ <div class="container">
+  <div class="eyebrow reveal">08 · What the SME sees</div>
+  <h2 class="reveal">Not a spreadsheet.<br>A <span class="grad">conversation.</span></h2>
+  <div class="dashboard reveal">
+   <div class="dash-top">
+    <div><div class="eyebrow">Business readiness</div><div class="score">74<span>/100</span></div></div>
+    <div class="pill good">READY TO IMPROVE</div>
+   </div>
+   <div class="bars">
+    <div class="bar"><label><span>Revenue stability</span><b>82%</b></label><div class="track"><div class="fill" style="width:82%"></div></div></div>
+    <div class="bar"><label><span>Cash-flow health</span><b>68%</b></label><div class="track"><div class="fill" style="width:68%"></div></div></div>
+    <div class="bar"><label><span>Debt position</span><b>55%</b></label><div class="track"><div class="fill" style="width:55%"></div></div></div>
+    <div class="bar"><label><span>Payment patterns</span><b>91%</b></label><div class="track"><div class="fill" style="width:91%"></div></div></div>
+   </div>
+   <div class="pills"><span class="pill good">Strength · stable revenue</span><span class="pill good">Strength · payment pattern</span><span class="pill no">Improve · short-term debt</span><span class="pill no">Improve · cash-flow volatility</span></div>
+  </div>
+  <div class="ai reveal">
+   <div class="chat">
+    <div class="eyebrow">ASK سمي</div>
+    <div class="bubble user">Why is my readiness 74?</div>
+    <div class="bubble bot">Your strongest signals are stable revenue and healthy payment patterns. The main factors lowering the assessment are short-term debt and cash-flow volatility.</div>
+    <div class="bubble user">What should I improve first?</div>
+    <div class="bubble bot">Start with cash-flow stability. Then reduce short-term debt where possible. Improving these areas could make your financial profile more consistent.</div>
+   </div>
+   <div class="card" style="margin:0">
+    <div class="num">WHY AI BELONGS HERE</div>
+    <h3>AI is the interpreter — not the decision-maker.</h3>
+    <p>The calculations should be deterministic and explainable. GenAI turns those results into plain-language explanations, prioritizes actions and answers questions about the report.</p>
+    <div class="guard">No “AI predicts your approval.” No black-box promise. No guarantee.</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="openbanking">
+ <div class="container">
+  <div class="eyebrow reveal">09 · Why now technically?</div>
+  <h2 class="reveal">The infrastructure<br>is catching up.</h2>
+  <p class="big reveal">In March 2026, SAMA began licensing fintech companies to provide Open Banking services after the regulatory sandbox phase.</p>
+  <div class="grid reveal" style="margin-top:35px">
+   <div class="card wide"><div class="num">OPEN BANKING</div><h3>Less manual entry. More usable data.</h3><p>With customer consent, financial information can be securely shared with supervised entities. That creates a foundation for products that use real financial data instead of asking SMEs to reconstruct their finances manually.</p></div>
+   <div class="card"><div class="num">MVP REALITY</div><h3>We do not need a bank API tomorrow.</h3><p>For the hackathon demo, we can use synthetic data or a mocked connection — while designing the architecture around the real Open Banking model.</p></div>
+  </div>
+  <div class="source reveal">SAMA says Open Banking is designed to enable customers to securely share financial information with supervised entities, with customer consent and privacy protections.</div>
+ </div>
+</section>
+
+<section id="hackathon">
+ <div class="container">
+  <div class="eyebrow reveal">10 · Why this fits the hackathon</div>
+  <h2 class="reveal">A strong problem is not enough.<br>It has to be <span class="grad">buildable.</span></h2>
+  <div class="grid reveal">
+   <div class="card"><div class="num">REAL PROBLEM</div><h3>Relevant to Saudi SMEs</h3><p>Financing access, readiness, financial literacy and cash-flow management are active ecosystem priorities.</p></div>
+   <div class="card"><div class="num">TECHNICAL DEPTH</div><h3>More than a chatbot</h3><p>Data processing + financial indicators + Open Banking-ready architecture + explainable GenAI.</p></div>
+   <div class="card"><div class="num">MVP FEASIBILITY</div><h3>We can actually demo it</h3><p>Use synthetic SME data for the prototype, then show how a real Open Banking connection would plug into the architecture.</p></div>
+   <div class="card wide"><div class="num">MEASURABLE OUTCOME</div><h3>From “I don't know” → “I know what to do next.”</h3><p>Our demo can prove a simple user journey: understand financial position, see readiness factors, ask why, and receive prioritized improvement actions.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="credibility">
+ <div class="container">
+  <div class="eyebrow reveal">11 · Credibility & boundaries</div>
+  <h2 class="reveal">Useful AI.<br><span class="grad">Responsible AI.</span></h2>
+  <div class="grid reveal">
+   <div class="card"><div class="num">WE DO</div><h3>Explain financial readiness</h3><p>Use deterministic calculations for core indicators and GenAI to translate those results into understandable explanations and actions.</p></div>
+   <div class="card"><div class="num">WE DO NOT</div><h3>Approve or reject financing</h3><p>سمي does not replace a bank's credit assessment, make lending decisions, or guarantee that an SME will receive financing.</p></div>
+   <div class="card"><div class="num">DATA</div><h3>Consent first</h3><p>Open Banking data would only be used through authorized, consent-based connections. For the hackathon, synthetic/demo data keeps the prototype safe.</p></div>
+  </div>
+  <div class="guard reveal">The credibility test: every number we calculate should be explainable, every AI recommendation should trace back to an observable factor, and the final financing decision stays with the financial institution.</div>
+ </div>
+</section>
+
+<section id="mvp">
+ <div class="container">
+  <div class="eyebrow reveal">12 · What we actually build</div>
+  <h2 class="reveal">Small enough to finish.<br>Strong enough to <span class="grad">demo.</span></h2>
+  <div class="roadmap reveal">
+   <div class="road"><div class="phase">01 · INPUT</div><h3>SME profile</h3><p>Business type, revenue, expenses, debt and transaction data.</p></div>
+   <div class="road"><div class="phase">02 · ENGINE</div><h3>Financial analysis</h3><p>Calculate transparent indicators and readiness factors.</p></div>
+   <div class="road"><div class="phase">03 · AI</div><h3>Explain + recommend</h3><p>Generate plain-language insights and prioritized actions.</p></div>
+   <div class="road"><div class="phase">04 · OUTPUT</div><h3>Readiness report</h3><p>Dashboard + downloadable summary + optional what-if scenarios.</p></div>
+  </div>
+  <div class="grid reveal" style="margin-top:18px">
+   <div class="card"><div class="num">FUNCTIONAL</div><h3>What it must do</h3><p>Ingest data · categorize transactions · calculate indicators · assess readiness · explain factors · recommend actions · generate a report · answer questions.</p></div>
+   <div class="card"><div class="num">NON-FUNCTIONAL</div><h3>How it must behave</h3><p>Secure · privacy-aware · fast · reliable · explainable · simple UX · Arabic/English-ready · clear regulatory boundary.</p></div>
+   <div class="card"><div class="num">SUCCESS</div><h3>What we want to prove</h3><p>A business owner can understand their financial position in minutes and leave knowing what to improve next.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="value">
+ <div class="container">
+  <div class="eyebrow reveal">13 · Why anyone should care</div>
+  <h2 class="reveal">One engine.<br><span class="grad">Three wins.</span></h2>
+  <div class="grid reveal">
+   <div class="card"><div class="num">01 · SME</div><h3>Clarity before applying</h3><p>Understand strengths, weaknesses and practical next steps instead of entering the financing journey blindly.</p></div>
+   <div class="card"><div class="num">02 · FINTECH / BANK</div><h3>A better-prepared customer</h3><p>Structured information and a readiness layer can reduce friction around the early financing journey.</p></div>
+   <div class="card"><div class="num">03 · ECOSYSTEM</div><h3>Turn data into action</h3><p>Open Banking becomes more than connectivity: it can support useful, explainable financial products for businesses.</p></div>
+  </div>
+  <div class="question reveal"><div class="q">The goal is not to tell an SME <span class="grad">“yes” or “no.”</span><br>It is to tell them <span class="grad">“here is where you stand — and what you can do next.”</span></div></div>
+ </div>
+</section>
+
+<section id="pitch">
+ <div class="container cta">
+  <div class="eyebrow reveal">14 · The pitch</div>
+  <h2 class="reveal">“What if SMEs could check their financial readiness <span class="grad">before</span> they ask for financing?”</h2>
+  <p class="big reveal">That is <strong>سمي (Sami)</strong> — the SME Financial Readiness Engine. And the conversation starts with our tagline: <strong>سمي، وش بغيتي؟</strong> — “Sami, what do you need?”</p>
+  <p class="reveal">We combine financial data, transparent analysis, Open Banking-ready architecture and GenAI explanations to turn a confusing financing journey into a clear next step.</p>
+  <a class="button reveal" href="#sources">See the evidence →</a>
+ </div>
+</section>
+
+<section id="sources">
+ <div class="container">
+  <div class="eyebrow reveal">Evidence · Sources</div>
+  <h2 class="reveal">Built from the <span class="grad">signal.</span></h2>
+  <div class="grid reveal">
+   <div class="card wide"><h3>Saudi Central Bank · 2026</h3><p>Fintech ecosystem growth, Open Banking licensing, connected accounts and the direction of Saudi financial innovation.</p><div class="source"><a href="https://sama.gov.sa/en-us/MediaCenter/News/Pages/15092026.aspx" target="_blank">SAMA · Money20/20 Middle East keynote</a><br><a href="https://sama.gov.sa/en-US/MediaCenter/News/Pages/news-1135.aspx" target="_blank">SAMA · Open Banking licensing</a></div></div>
+   <div class="card"><h3>IMF · 2025</h3><p>SME lending was 9.4% of total lending in 2024, with a cited Vision 2030 target of 20%.</p><div class="source"><a href="https://www.elibrary.imf.org/view/journals/002/2025/223/article-A001-en.xml" target="_blank">IMF · Saudi Arabia Article IV</a></div></div>
+   <div class="card"><h3>Monsha’at · 2026</h3><p>Funding Week: 62 participating entities, 1,200+ consultations, and sessions on funding, financial literacy, fintech, cash flow and credit information.</p><div class="source"><a href="https://www.monshaat.gov.sa/en/node/468603" target="_blank">Monsha’at · Funding Week results</a></div></div>
+  </div>
+  <div class="source reveal" style="margin-top:28px">The figures above are evidence for the problem context, not claims that سمي has already been validated in production. The readiness score shown in the demo is illustrative. Hala is only the fictional business-owner example.</div>
+ </div>
+</section>
+</main>
+
+<footer>
+  <strong>سمي · Sami · SME Financial Readiness Engine</strong><br>
+  Hackathon concept · Saudi Arabia · 2026
+</footer>
+
+<script>
+const progress=document.getElementById('progress');
+const update=()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(scrollY/h*100)+'%'};
+addEventListener('scroll',update,{passive:true});update();
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+</script>
+</body>
+</html>
