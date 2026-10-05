@@ -64,8 +64,20 @@ body{overflow:hidden}
 <div class="app">
 <header class="topbar"><div class="brand"><div class="mark">SME</div><div><strong>سمي · Sami</strong><small>SME Financial Readiness Engine</small></div></div><nav class="nav"><button data-go="home" class="active">Home</button><button data-go="profile">Business</button><button data-go="assessment">Readiness</button><button data-go="chat">Ask سمي</button></nav><div class="profilePill">Hala · Demo</div></header>
 
-<div class="pageViewport"><div class="pageTrack">\n<section id="home" class="view active">
-<div class="hero"><div class="heroLogo">SME</div><div class="eyebrow">SME Financial Readiness Engine</div><h1>Know where you stand.<br><span class="grad">Know what to do next.</span></h1><p>سمي turns business financial information into a clear readiness picture, explains what is driving it, and helps an SME decide what to improve next.</p><div class="tagline"><strong>سمي، وش بغيتي؟</strong><span>Tagline · where the human–AI conversation starts</span></div></div>
+<div class="pageViewport"><div class="pageTrack"><section id="home" class="view active">
+<div class="hero"><div class="heroLogo">SME</div><div class="eyebrow">SME Financial Readiness Engine</div>
+ 
+ <div style="
+  margin-top: 7px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  opacity: 0.7;
+">
+  Areej Almarri · اريج المري
+</div>
+ 
+ <h1>Know where you stand.<br><span class="grad">Know what to do next.</span></h1><p>سمي turns business financial information into a clear readiness picture, explains what is driving it, and helps an SME decide what to improve next.</p><div class="tagline"><strong>سمي، وش بغيتي؟</strong><span>Tagline · where the human–AI conversation starts</span></div></div>
 <div class="homeGrid"><div class="glass choice"><div class="eyebrow">01 · Start with the business</div><h2>Meet Hala's business</h2><p>Hala is a fictional Saudi SME owner preparing to finance a second branch. Explore her profile before running the assessment.</p><button onclick="go('profile')">View Hala's business →</button></div><div class="miniStats"><div class="stat"><small>Example readiness</small><b>74 / 100</b><small>Illustrative · not a credit score</small></div><div class="stat"><small>Core journey</small><b>Understand → Act</b><small>Data · analysis · explanation · action</small></div></div></div>
 <div class="glass card" style="margin-top:18px;padding:22px"><div class="eyebrow">Why this matters · Saudi Arabia</div><div class="metrics"><div class="metric"><small>SME lending · 2024</small><b>9.4%</b><span class="source">of total bank lending</span></div><div class="metric"><small>Fintech companies</small><b>371</b><span class="source">operating by Aug 2026</span></div><div class="metric"><small>Open Banking</small><b>337K+</b><span class="source">connected accounts</span></div></div><p class="source" style="margin:14px 0 0">The opportunity is not only access to financing. It is helping SMEs understand their readiness before they apply.</p></div>
 <div class="glass card" style="margin-top:18px"><div class="eyebrow">What this MVP demonstrates</div><div class="metrics"><div class="metric"><small>Financial analysis</small><b>Explainable</b></div><div class="metric"><small>AI interaction</small><b>Conversational</b></div><div class="metric"><small>Open Banking</small><b>Demo-ready</b></div></div></div>
@@ -166,17 +178,6 @@ function connectBank(){document.getElementById('connected').style.display='block
 function sim(v){v=+v;document.getElementById('cashSimVal').textContent=v+' / 100';const score=Math.round(74+(v-68)*.28);document.getElementById('simScore').textContent=score;document.getElementById('simDelta').textContent=score===74?'Current assessment':(score>74?'+'+(score-74)+' points · illustrative improvement':'-'+(74-score)+' points · illustrative change');const meter=document.querySelector('#simulator .range');meter.style.filter=score<60?'hue-rotate(-45deg)':score<75?'hue-rotate(-15deg)':'none'}
 </script>
 </body>
-<div style="
-  width: 100%;
-  text-align: center;
-  margin-top: 24px;
-  padding: 10px 0;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  opacity: 0.7;
-">
-  Areej Almarri · اريج المري
-</div> 
+
 
 </html>
