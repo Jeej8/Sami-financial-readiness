@@ -427,5 +427,20 @@ addEventListener('scroll',update,{passive:true});update();
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
 </script>
+ <div style="
+  position: fixed;
+  top: 12px;
+  left: 16px;
+  z-index: 99999;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  opacity: 0.7;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+">
+  Areej Almarri · اريج المري
+</div>
 </body>
 </html>
